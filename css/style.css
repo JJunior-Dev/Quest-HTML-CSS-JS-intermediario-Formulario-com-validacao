@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: url(../images/bg-repeat.jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 60px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.main {
+    width: 300px;
+    height: 111px;
+}
+
+.main h1 {
+    padding-bottom: 11px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 340px;
+    height: 378px;
+}
+
+.form p {
+    color: #000000;
+    margin-left: -7px;
+}
+
+.submit {
+    padding: 12px;
+    background-color: #3BCC87;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    margin-top: 12px;
+}
+
+input, .textarea {
+    padding: 9px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px solid #000000;
+}
+
+.bordaVerde {
+    border-color: #00C22B;
+}
+
+.bordaVermelha {
+    border-color: #F52E2E;
+}
+
+.form .obrigatorio {
+    color: #F52E2E;
+    font-size: 8px;
+    margin: -16px 1px -8px;
+    display: none;
+}
