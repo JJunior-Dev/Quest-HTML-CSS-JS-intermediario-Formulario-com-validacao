@@ -1,0 +1,16 @@
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .form {
+        max-width: 300px;
+    }
+}
