@@ -1,24 +1,25 @@
-const inputs = document.querySelectorAll("input");
-const textarea = document.querySelector("textarea");
-const spans = document.querySelectorAll("span");
+const camposFormulario = document.querySelectorAll(".campo");
+const botaoEnviar = document.getElementById("btn-enviar");
 
-inputs.forEach(input => {
-    input.addEventListener("input", mudarBorda);
-});
+botaoEnviar.addEventListener("click", validarCampos);
+camposFormulario.forEach(input => input.addEventListener("input", validarCampo));
 
-textarea.addEventListener("input", mudarBorda);
-
-function mudarBorda(event) {
+function validarCampo(event) {
     const input = event.target;
-    const associatedSpan = input.nextElementSibling;
+    const isValid = input.value.trim() !== "";
 
-    if (input.value !== "") {
-        input.classList.add("bordaVerde");
-        input.classList.remove("bordaVermelha");
-        associatedSpan.style.display = "none";
-    } else {
-        input.classList.remove("bordaVerde");
-        input.classList.add("bordaVermelha");
-        associatedSpan.style.display = "block";
-    };
+    atualizarEstiloInput(input, isValid);
+};
+
+function validarCampos() {
+    camposFormulario.forEach(input => {
+        const isValid = input.value.trim() !== "";
+        atualizarEstiloInput(input, isValid);
+    });
+};
+
+function atualizarEstiloInput(input, isValid) {
+    input.classList.toggle("valido", isValid);
+    input.classList.toggle("erro", !isValid);
+    input.nextElementSibling.style.display = isValid ? "none" : "block";
 };

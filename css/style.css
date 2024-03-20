@@ -50,6 +50,7 @@ body {
     font-weight: 700;
     border: none;
     margin-top: 12px;
+    border-radius: 5px;
 }
 
 input, .textarea {
@@ -59,11 +60,15 @@ input, .textarea {
     border: 1px solid #000000;
 }
 
-.bordaVerde {
+.textarea {
+    resize: none;
+}
+
+.valido {
     border-color: #00C22B;
 }
 
-.bordaVermelha {
+.erro {
     border-color: #F52E2E;
 }
 

@@ -14,16 +14,16 @@
         <p>Caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
     </main>
     <form class="form" action="">
-        <input type="text" name="name" id="name" placeholder="Nome completo *" required>
+        <input class="campo" type="text" name="name" id="name" placeholder="Nome completo *" required>
         <span class="obrigatorio" id="msg">campo obrigatório</span>
-        <input type="email" name="email" id="email" placeholder="Email *" required>
+        <input class="campo" type="email" name="email" id="email" placeholder="Email *" required>
         <span class="obrigatorio">campo obrigatório</span>
-        <input type="tel" name="tel" id="tel" placeholder="Telefone *" required>
+        <input class="campo" type="tel" name="tel" id="tel" placeholder="Telefone *" required>
         <span class="obrigatorio">campo obrigatório</span>
-        <textarea class="textarea" name="message" id="message" rows="6" placeholder="Mensagem *" required></textarea>
+        <textarea class="textarea campo" name="message" id="message" rows="6" placeholder="Mensagem *" required></textarea>
         <span class="obrigatorio">campo obrigatório</span>
         <p>*Campos obrigatórios</p>
-        <input class="submit" type="submit" value="Enviar">
+        <button class="submit" id="btn-enviar" type="submit">Enviar</button>
     </form>
     <script src="./js/index.js"></script>
 </body>
